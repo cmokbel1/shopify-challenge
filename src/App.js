@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+const apiKey = process.env.SECRET_KEY;
+const aiURL = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
+
 
 function App() {
   const [userPrompt, setUserPrompt] = useState('');
@@ -8,8 +11,7 @@ function App() {
     aiResponse: '',
   });
 
-  const apiKey = process.env.SECRET_KEY;
-  const aiURL = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
+
 
   async function onSubmit(event) {
     event.preventDefault();
