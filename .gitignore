@@ -1,0 +1,5 @@
+# ignore .env because of the API Key :}
+.env
+
+# node_modules because of all the files
+/node_modules
