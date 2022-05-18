@@ -9,7 +9,7 @@ function App() {
   });
 
   const apiKey = process.env.SECRET_KEY;
-  const aiURL = 'https://api.openai.com/v1/completions';
+  const aiURL = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
 
   async function onSubmit(event) {
     event.preventDefault();
