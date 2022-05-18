@@ -1,15 +1,16 @@
 import { useState } from 'react';
 
-const apiKey = process.env.SECRET_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
+
 const aiURL = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
 
 
 function App() {
   const [userPrompt, setUserPrompt] = useState('');
-  const [responses, setResponses] = useState({
-    userPrompt: '',
+  const [responses, setResponses] = useState([{
+    prompt: '',
     aiResponse: '',
-  });
+}]);
 
 
 
@@ -20,7 +21,7 @@ function App() {
       prompt: userPrompt,
       temperature: 0.6,
       max_tokens: 64,
-      echo: true
+
     }
     try {
       const response = await fetch(aiURL, {
@@ -35,6 +36,8 @@ function App() {
         // change our response from the API call to an object
         const jsonResponse = await response.json();
         console.log(jsonResponse)
+        setResponses({prompt: userPrompt, aiResponse: jsonResponse.choices[0].text })
+        console.log(responses)
         // We want to prepend our findings from the API to the responses section
       }
 
@@ -47,6 +50,7 @@ return (
   <>
     <h1 className="text-light text-center bg-info shadow-lg p-3 mb-5">AI Sandbox</h1>
     <br />
+
     <div className="container">
       <h3 className="text-left shadow p-3 mb-5 bg-body rounded text-uppercase">Instructions</h3>
       <h5 className="fw-light">Insert a prompt to the AI and see what the computer has to tell to you</h5>
@@ -60,15 +64,15 @@ return (
     <br />
     <div className="container">
       <h4 className="text-uppercase shadow p-3 mb-5 bg-body rounded">Responses</h4>
-      <div className="container" id="responses">
-        {/* {responses.map(response => { return (
-          <div class="card w-75">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <div className="container align-center" id="responses">
+        {responses.map((response, index) => { return (
+          <div key={index} className="card w-75">
+          <div className="card-body">
+            <h5 className="card-title">prompt: {response.userPrompt}</h5>
+            <p className="card-text">response: {response.aiResponse}</p>
           </div>
         </div>
-        )})} */}
+        )})}
       </div>
     </div>
   </>
