@@ -7,16 +7,13 @@ const aiURL = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
 
 function App() {
   const [userPrompt, setUserPrompt] = useState('');
-  const [responses, setResponses] = useState([{
-    prompt: '',
-    aiResponse: '',
-}]);
+  const [responses, setResponses] = useState([{}]);
 
 
 
   async function onSubmit(event) {
     event.preventDefault();
-
+    
     const data = {
       prompt: userPrompt,
       temperature: 0.6,
@@ -36,8 +33,13 @@ function App() {
         // change our response from the API call to an object
         const jsonResponse = await response.json();
         console.log(jsonResponse)
-        setResponses({prompt: userPrompt, aiResponse: jsonResponse.choices[0].text })
+        console.log(jsonResponse.choices[0].text)
+        setResponses([...responses,
+          { 
+          aiResponse:jsonResponse.choices[0].text
+        }]);
         console.log(responses)
+        setUserPrompt('');
         // We want to prepend our findings from the API to the responses section
       }
 
@@ -65,7 +67,8 @@ return (
     <div className="container">
       <h4 className="text-uppercase shadow p-3 mb-5 bg-body rounded">Responses</h4>
       <div className="container align-center" id="responses">
-        {responses.map((response, index) => { return (
+        {responses.length === 1 ? null :
+        responses.map((response, index) => { return (
           <div key={index} className="card w-75">
           <div className="card-body">
             <h5 className="card-title">prompt: {response.userPrompt}</h5>
