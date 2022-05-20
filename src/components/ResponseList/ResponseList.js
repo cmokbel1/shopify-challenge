@@ -16,8 +16,8 @@ const ResponseItem = ({ response, index }) => {
     return (
         <div key={index} className="card mb-3">
             <div className="card-body">
-                <p className="card-title fs-5">prompt: {response.prompt}</p>
-                <p className="card-text fs-5">response: {response.aiResponse}</p>
+                <p className="card-title fs-5"><u>prompt</u>: {response.prompt}</p>
+                <p className="card-text fs-5 text-secondary"><u>response</u>: {response.aiResponse}</p>
             </div>
         </div>
     )
