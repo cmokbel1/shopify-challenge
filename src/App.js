@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css'
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -13,11 +14,21 @@ function App() {
   // loading determines if the button is enabled or disabled, when a request is sent
   // we set loading to true (disabling the button).
   const [loading, setLoading] = useState(false);
+  // errorText is either a user error  or an API error
+  const [errorText, setErrorText] = useState('');
 
 
   async function onSubmit(event) {
     event.preventDefault();
+    if(userPrompt === '') {
+      setErrorText('A prompt is required');
+      // set the #promptWrapper border to 1px solid red
+      // set the #errorText to 'A prompt is required'
+      return
+    }
+    
     setLoading(true);
+    setErrorText('');
 
     const data = {
       prompt: userPrompt,
@@ -43,7 +54,7 @@ function App() {
           }, ...responses]);
       }
     } catch (error) {
-      console.log(error)
+      setErrorText(error);
     } finally {
       setUserPrompt('');
       setLoading(false);
@@ -58,13 +69,14 @@ function App() {
       <br />
       <h3 className="text-left shadow p-3 mb-5 bg-body rounded text-uppercase">Instructions</h3>
       <div className="container">
-
         <h5 className="fw-light">Insert a prompt to the AI and see what the computer has to tell to you. There is a placeholder value to give you a suggestion, but you are not limited to this type of prompt. You can also ask the computer to tell you a story, or ask about the weather. The sky is the limit with this AI sandbox. </h5>
         <form method="POST" className="mb-3">
           <label htmlFor="PromptAI" className="form-label badge rounded-pill text-bg-primary">Enter Prompt</label>
-          <textarea className="form-control" id="PromptAi" rows="3" onChange={(e) => setUserPrompt(e.target.value)} placeholder="Name a famous actor from the early 19th century" value={userPrompt}></textarea>
-          <br />
-          <input className="btn btn-primary" type="submit" onClick={onSubmit} disabled={loading} id="query"></input>
+          <div id="promptWrapper" className={errorText ? "error" : null}>
+            <textarea className="form-control" id="PromptAi" rows="3" onChange={(e) => setUserPrompt(e.target.value)} placeholder="Name a famous actor from the early 19th century" value={userPrompt}></textarea>
+          </div>
+          <p id="errorText" style={{color: "red"}}>{errorText}</p>
+          <input className="btn btn-primary mt-2" type="submit" onClick={onSubmit} disabled={loading} id="query"></input>
         </form>
       </div>
       <br />
