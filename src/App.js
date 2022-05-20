@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -6,14 +6,15 @@ const aiURL = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
 
 
 function App() {
+  // userPrompt captures the users input to send to openapi
   const [userPrompt, setUserPrompt] = useState('');
+  // responses is the collection of responses from openapi
   const [responses, setResponses] = useState([]);
+  // loading determines if the button is enabled or disabled, when a request is sent
+  // we set loading to true (disabling the button).
   const [loading, setLoading] = useState(false);
 
 
-  // useEffect(() => {
-
-  // }, [])
   async function onSubmit(event) {
     event.preventDefault();
     setLoading(true);
