@@ -8,8 +8,10 @@ This challenge makes use of the GPT-3 ai API. Users can ping an API for completi
 ## Table of Contents
   1. [Installation](#Installation)
   2. [Usage](#Usage)
-  3. [Contribution Guidelines](#Contributions)
-  4. [Licenses](#Licenses)
+  3. [Licenses](#Licenses)
+  4. [Contribution Guidelines](#Contributions)
+  5. [Tests](#Tests)
+  6. [Questions](#Questions)
 
 ## Installation
 Download files and or clone the git repository. once downloaded navigate to the project folder in the terminal. when there, install all necessary packages with, 'npm i'. Once packages are installed one can run the app with simply inputting 'npm start'. proceed to test application functionality or just visit the live website. https://peaceful-everglades-82247.herokuapp.com/
