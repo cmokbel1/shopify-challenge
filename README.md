@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+#Shopify Challenge
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/cmokbel1/shopify-challenge)
+  <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png"/>
+  
+##Description
+This challenge makes use of the GPT-3 ai API. Users can ping an API for completions of a multitude of requests. One can get the weather of a current place in time, or ask the ai to tell them a story. Responses that are returned from the AI are listed below the responses header from newest to oldest. The application is built with a boostrap library which allows for cross device and browser functionality. the application is responsive to desktops and mobile devices/tablets.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Table of Contents
+  1. [Installation](#Installation)
+  2. [Usage](#Usage)
+  3. [Contribution Guidelines](#Contributions)
+  4. [Licenses](#Licenses)
 
-## Available Scripts
+##Installation
+Download files and or clone the git repository. once downloaded navigate to the project folder in the terminal. when there, install all necessary packages with, 'npm i'. Once packages are installed one can run the app with simply inputting 'npm start'. proceed to test application functionality or just visit the live website. https://peaceful-everglades-82247.herokuapp.com/
 
-In the project directory, you can run:
+##Usage
+see installation guidelines
 
-### `npm start`
+##Licenses
+NPM
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##Contributions
+Myself
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##Tests
+tested API multiple times to ensure the responses would return as expected
 
-### `npm test`
+Questions
+For questions regarding the project, please use the following information:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Username: cmokbel1
+Repository: https://github.com/cmokbel1/shopify-challenge
+E-mail: claudemokbel@gmail.com
