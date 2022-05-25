@@ -1,6 +1,6 @@
 #Shopify Challenge
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/cmokbel1/shopify-challenge)
-  <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png"/>
+  <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/npm-badge-1.png"/>
   
 ##Description
 This challenge makes use of the GPT-3 ai API. Users can ping an API for completions of a multitude of requests. One can get the weather of a current place in time, or ask the ai to tell them a story. Responses that are returned from the AI are listed below the responses header from newest to oldest. The application is built with a boostrap library which allows for cross device and browser functionality. the application is responsive to desktops and mobile devices/tablets.
