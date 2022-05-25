@@ -31,6 +31,9 @@ tested API multiple times to ensure the responses would return as expected
 ## Questions
 For questions regarding the project, please use the following information:
 
-Username: cmokbel1
-Repository: https://github.com/cmokbel1/shopify-challenge
-E-mail: claudemokbel@gmail.com
+Username:  
+cmokbel1
+Repository:  
+https://github.com/cmokbel1/shopify-challenge
+E-mail:   
+claudemokbel@gmail.com
